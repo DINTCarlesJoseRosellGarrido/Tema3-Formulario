@@ -13,8 +13,8 @@
         <DockPanel DockPanel.Dock="Bottom"  Margin="5">
             <TextBlock x:Name="nameCreator" FontSize="20" FontStyle="Italic">Carles Jose Rosell Garrido</TextBlock>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
-                <Button x:Name="buttonAceptar" Width="75" Height="20" Margin="5" Content="Aceptar"/>
-                <Button x:Name="buttonCancelar" Width="75" Height="20" Margin="5" Content="Cancelar"/>
+                <Button x:Name="buttonAceptar" Content="Aceptar"/>
+                <Button x:Name="buttonCancelar" Content="Cancelar"/>
             </StackPanel>
         </DockPanel>
 
@@ -25,34 +25,28 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Margin="5">
-                <Border x:Name="infoMain" BorderBrush="Black" BorderThickness="3" Background="#FF75D8F8" CornerRadius="3">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
+                <Border x:Name="infoMain" Background="#FF75D8F8" Style="{StaticResource bordeForm}">
                     <StackPanel>
                         <DockPanel>
-                            <TextBlock Margin="5" DockPanel.Dock="Left" MinWidth="50">Nombre</TextBlock>
-                            <Image x:Name="infoName" Width="20" Source="/assets/info.png" Margin="5" DockPanel.Dock="Right" ToolTip="Máximo 100 caracteres"></Image>
+                            <TextBlock Style="{StaticResource textForm}">Nombre</TextBlock>
+                            <Image x:Name="infoName" Style="{StaticResource pictureForm}" ToolTip="Máximo 100 caracteres"></Image>
                             <TextBox x:Name="nameBox" Margin="0,5,0,5"></TextBox>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Margin="5" DockPanel.Dock="Left" MinWidth="50">Edad</TextBlock>
-                            <Image x:Name="infoAge" Width="20" Source="/assets/info.png" Margin="5" DockPanel.Dock="Right" ToolTip="Número entero entre 0 y 100"></Image>
+                            <TextBlock Style="{StaticResource textForm}">Edad</TextBlock>
+                            <Image x:Name="infoAge" Style="{StaticResource pictureForm}" ToolTip="Número entero entre 0 y 100"></Image>
                             <TextBox x:Name="ageBox" Margin="0,5,0,5"></TextBox>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Margin="5" DockPanel.Dock="Left" MinWidth="50">Dirección</TextBlock>
-                            <Image x:Name="infoDirection" Width="20" Source="/assets/info.png" Margin="5" DockPanel.Dock="Right" ToolTip="Incluir el código postal"></Image>
+                            <TextBlock Style="{StaticResource textForm}">Dirección</TextBlock>
+                            <Image x:Name="infoDirection" Style="{StaticResource pictureForm}" ToolTip="Incluir el código postal"></Image>
                             <TextBox x:Name="directionBox" Margin="0,5,0,5"></TextBox>
                         </DockPanel>
                     </StackPanel>
                 </Border>
-                <Border x:Name="infoExtra" BorderBrush="Black" BorderThickness="3" Background="#FFE8BD73" Margin="0,15,0,0" CornerRadius="3">
-                    <Border.Effect>
-                        <DropShadowEffect/>
-                    </Border.Effect>
+                <Border x:Name="infoExtra" Background="#FFE8BD73" Margin="0,15,0,0" Style="{StaticResource bordeForm}">
                     <StackPanel Orientation="Horizontal">
-                        <GroupBox x:Name="selecAficiones" Header="Aficiones" Margin="10" MinWidth="170">
+                        <GroupBox x:Name="selecAficiones" Header="Aficiones">
                             <StackPanel Margin="10">
                                 <CheckBox x:Name="buttonDeporte" Content="Hacer deporte"></CheckBox>
                                 <CheckBox x:Name="buttonViajar" Content="Viajar"></CheckBox>
@@ -60,7 +54,7 @@
                                 <CheckBox x:Name="buttonLeer" Content="Leer comics"></CheckBox>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox x:Name="selecEstadoCivil" Header="Estado civil" Margin="10" MinWidth="170">
+                        <GroupBox x:Name="selecEstadoCivil" Header="Estado civil">
                             <StackPanel Margin="10">
                                 <RadioButton x:Name="buttonSoltero" Content="Soltero" IsChecked="True" GroupName="EstadoCivil"/>
                                 <RadioButton x:Name="buttonCasado" Content="Casado" GroupName="EstadoCivil"/>

@@ -4,6 +4,35 @@
              xmlns:local="clr-namespace:Tema3_Formulario"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="{x:Type Border}" x:Key="bordeForm">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="MinWidth" Value="170"/>
+        </Style>
+        <Style TargetType="{x:Type Image}" x:Key="pictureForm">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Source" Value="/assets/info.png"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="DockPanel.Dock" Value="Right"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="textForm">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+            <Setter Property="MinWidth" Value="50"/>
+        </Style>
     </Application.Resources>
 </Application>
